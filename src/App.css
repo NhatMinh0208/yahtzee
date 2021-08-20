@@ -1,5 +1,14 @@
+
 .App {
   text-align: center;
+  width: 1600px;
+  height: 900px;
+  grid-template-columns: repeat(320,1fr);
+  grid-template-rows: repeat(180,1fr);
+  position: relative;
+  top: 25px;
+  left: 150px;
+  background: hsl(230deg, 100%, 95%);
 }
 
 .App-logo {
@@ -36,4 +45,17 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+.Title {
+  font-size: 100px;
+  position: relative;
+  width: 800px;
+  height: 150px;
+  top: 100px;
+  left: 400px;
+  /* background: silver; */
+}
+.Title-screen-button-container {
+
 }

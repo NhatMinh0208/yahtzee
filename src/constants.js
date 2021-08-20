@@ -1,0 +1,1 @@
+export const SCREEN_TITLE = 0;
