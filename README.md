@@ -1,3 +1,7 @@
+# Risky Rollers
+This is the repository for *Risky Rollers*, which is a React project of mine, where I will try to make a simple numbers game. Right now the app is empty, but I will build its functionality step-by-step.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
