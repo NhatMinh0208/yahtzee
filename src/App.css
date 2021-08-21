@@ -57,5 +57,39 @@
   /* background: silver; */
 }
 .Title-screen-button-container {
-    border: 1px black;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 460px;
+    position: relative;
+    top: 150px;
+    left: 630px;
+}
+.Button {
+    background: hsl(270deg, 100%, 75%);
+    border: 0px;
+    width: 320px;
+    height: 120px;
+    font-size: 80px;
+    justify-content: center;
+}
+.Button:hover {
+    background: hsl(340deg, 100%, 75%)
+}
+.Button:click {
+    background: hsl(0deg, 100%, 75%)
+}
+
+.Normal-text {
+    position: relative;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.Section-label {
+    position: relative;
+    justify-content: center;
+    font-size: 60px;
 }
