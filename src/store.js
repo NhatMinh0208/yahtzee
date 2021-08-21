@@ -1,12 +1,21 @@
-import { createStore } from '@reduxjs/toolkit';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import * as myConsts from './constants.js';
-const mainReducer = (
-    state = {
-    screen: myConsts.SCREEN_TITLE,
-    },
+function screenReducer(
+    state = myConsts.SCREEN_TITLE,
     action
-    ) => {
-    return state;
+    )  {
+    switch(action.type)
+    {
+        case myConsts.ACTION_UPDSCREEN:
+            return action.screen;
+        default: return state;
+    }
 }
 
-export const store = createStore(mainReducer);
+const mainReducer = combineReducers({
+    screen: screenReducer
+});
+
+export const store = configureStore({
+    reducer: mainReducer
+});
