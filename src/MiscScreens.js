@@ -66,7 +66,7 @@ class HelpScreen_P extends React.Component {
                 width: '1300px',
             }}>
                 <em>Yahtzee</em> is a fun party game where you try to make the best scoring out of your dice!<br />
-                This web version allows you to play the game without needing a physical dice.
+                This web version allows you to play the game without needing physical dice.
             </div>
             <div className='Section-label' style={{
                 top: '70px',
