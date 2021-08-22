@@ -1,5 +1,7 @@
-# Risky Rollers
-This is the repository for *Risky Rollers*, which is a React project of mine, where I will try to make a simple numbers game. Right now the app is empty, but I will build its functionality step-by-step.
+# Normie's Yahtzee
+Welcome to the repository Normie's web version of the popular dice game *Yahtzee*!
+This is a React project of mine, where I will try to create a web game. Right now there are little to see, but I will build its functionality step-by-step.
+Expect daily progress.
 
 Below is just the stuff that comes with the React template, lmao.
 

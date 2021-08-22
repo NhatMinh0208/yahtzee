@@ -20,7 +20,7 @@ class TitleScreen_P extends React.Component {
     render() {
         return <div>
             <div className="Title">
-                Risky Rollers
+                Yahtzee
             </div>
             <div className="Title-screen-button-container">
                 <button className="Button" onClick={() => this.props.changeScreen(myConsts.SCREEN_GAME)}>

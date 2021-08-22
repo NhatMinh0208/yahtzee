@@ -18,7 +18,7 @@ function mapDispatchToProps(dispatch) {
  class CreditsScreen_P extends React.Component {
     render() {
         return <div>
-            <div className='Title'>Risky Rollers</div>
+            <div className='Title'>Yahtzee</div>
 
             <button className='Button' onClick={() => this.props.changeScreen(myConsts.SCREEN_TITLE)} style={{
                 position: 'relative',
@@ -48,7 +48,7 @@ function mapDispatchToProps(dispatch) {
 class HelpScreen_P extends React.Component {
     render() {
         return <div>
-            <div className='Title'>Risky Rollers</div>
+            <div className='Title'>Yahtzee</div>
 
             <button className='Button' onClick={() => this.props.changeScreen(myConsts.SCREEN_TITLE)} style={{
                 position: 'relative',
@@ -65,7 +65,8 @@ class HelpScreen_P extends React.Component {
                 left: '150px',
                 width: '1300px',
             }}>
-                <em>Risky Rollers</em> is a fun little game all about taking risks and rolling high!
+                <em>Yahtzee</em> is a fun party game where you try to make the best scoring out of your dice!<br />
+                This web version allows you to play the game without needing a physical dice.
             </div>
             <div className='Section-label' style={{
                 top: '70px',
@@ -78,12 +79,7 @@ class HelpScreen_P extends React.Component {
                 left: '100px',
                 width: '1400px',
             }}>
-                Each standard game of <em>Risky Rollers</em> is played over 15 rounds. <br />
-                In each round, you are given 3 random numbers from 1 to 20. After 
-                choosing one of them, we roll another random number from 1 to 20. 
-                If the rolled number is greater or equal to your chosen number, you win 
-                the same number of points as your chosen number. If it's less though, you win nothing! <br />
-                Try your best to win as many points as possible in this game of risk and rolls!
+                To be added in later.
             </div>
         </div>
     }
