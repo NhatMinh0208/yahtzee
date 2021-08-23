@@ -2,11 +2,13 @@ export const ACTION_UPDSCREEN = '1';
 export const ACTION_SCORE = '2';
 export const ACTION_TOGGLE_DICE = '3';
 export const ACTION_ROLL_DICE = '4';
+export const ACTION_DEBUG_YAHTZEE = '5';
 
 export const SCREEN_TITLE = '1001';
 export const SCREEN_GAME = '1002';
 export const SCREEN_HELP = '1003';
 export const SCREEN_CREDITS = '1004';
+export const SCREEN_END = '1005';
 
 export const PHASE_START_OF_GAME = '2000';
 export const PHASE_IDLE = '2001';
@@ -88,7 +90,7 @@ export const defaultScoreboard = [
     {
         type: SCORE_YAHTZEE,
         score: [],
-        maxApplications: 1000,
+        maxApplications: 1,
     },
     {
         type: SCORE_CHANCE,
@@ -102,7 +104,7 @@ export const defaultScoreboard = [
 ]
 
 export const SCORE_LABELS = {
-    '3001': 'Ones',
+    '3001': 'Aces',
     '3002': 'Twos',
     '3003': 'Threes',
     '3004': 'Fours',
@@ -133,6 +135,23 @@ export const SCORE_COLUMN = {
     '3012': 1,
     '3013': 1,
     '3014': 0,
+}
+
+export const SCORE_POSITION = {
+    '3001': 0,
+    '3002': 1,
+    '3003': 2,
+    '3004': 3,
+    '3005': 4,
+    '3006': 5,
+    '3007': 6,
+    '3008': 7,
+    '3009': 8,
+    '3010': 9,
+    '3011': 10,
+    '3012': 11,
+    '3013': 12,
+    '3014': 13,
 }
 
 export const DICECOUNT = 5;

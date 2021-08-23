@@ -1,8 +1,7 @@
 import React from 'react';
 import { TitleScreen } from './TitleScreen';
 import { GameScreen } from './GameScreen';
-import { HelpScreen } from './MiscScreens';
-import { CreditsScreen } from './MiscScreens';
+import { HelpScreen, CreditsScreen, EndScreen } from './MiscScreens';
 import * as myConsts from './constants';
 import { connect } from 'react-redux';
 
@@ -23,6 +22,8 @@ class Game_P extends React.Component {
                 return <HelpScreen />
             case myConsts.SCREEN_CREDITS:
                 return <CreditsScreen />
+            case myConsts.SCREEN_END:
+                return <EndScreen />
             default: return <div></div>
         }
     }

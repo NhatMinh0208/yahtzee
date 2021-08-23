@@ -41,8 +41,9 @@ function createScoreboardTile(obj, scoreHandler) {
 }
 
 class GameScreen_P extends React.Component {
-    
     render() { 
+
+
     const scoreboardUpper = this.props.gameState.scoreboard.map((obj) => {
         if (myConsts.SCORE_COLUMN[obj.type] === 0) 
         return createScoreboardTile(obj, this.props.doScore);
@@ -58,6 +59,8 @@ class GameScreen_P extends React.Component {
             {num}
         </button>
     })
+
+
     return <div>
         <button className='Button' onClick={() => this.props.changeScreen(myConsts.SCREEN_TITLE)} style={{
             position: 'relative',
@@ -83,11 +86,28 @@ class GameScreen_P extends React.Component {
             {diceTiles}
         </div>
 
-        <div className='Rolls-indicator'>
+        <div className='Normal-text' style={{
+            top: '-1050px',
+            left: '400px',
+        }}>
             Rolls left: {this.props.gameState.roundLimit - this.props.gameState.round}
         </div>
 
-
+        {
+            (this.props.gameState.phase === myConsts.PHASE_END_OF_GAME)?
+        (
+            <button className="Button" onClick={() => this.props.changeScreen(myConsts.SCREEN_END)} style={{
+                width: '300px',
+                height: '50px',
+                fontSize: '40px',
+                position: 'relative',
+                top: '-900px',
+                left: '400px',
+            }}>
+                End Game
+            </button>
+        ):
+        (
         <button className="Button" onClick={this.props.rollDice} style={{
             width: '300px',
             height: '50px',
@@ -98,6 +118,22 @@ class GameScreen_P extends React.Component {
         }}>
             Roll!
         </button>
+        )
+        }
+        <div className='Normal-text' style={{
+            bottom: '800px',
+        }}
+        id={this.props.gameState.errorCnt - 1}>
+            {this.props.gameState.error}
+        </div>
+
+        {(this.props.gameState.phase === myConsts.PHASE_PICK_JOKER)
+        ?<div className='Normal-text' style={{
+            top: '-1400px',
+            left: '950px',
+            width: '500px',
+        }}>Choose a score type to score your Joker in!</div>
+        :<div></div>}
     </div>
     }
 }
