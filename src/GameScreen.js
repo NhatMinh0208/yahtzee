@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { update_screen, score, toggle_dice } from './actions';
+import { update_screen, score, toggle_dice, roll_dice } from './actions';
 import * as myConsts from './constants';
 
 function mapStateToProps(state) {
@@ -14,6 +14,7 @@ function mapDispatchToProps(dispatch) {
         changeScreen : (screen) => dispatch(update_screen(screen)),
         doScore: (score_type) => dispatch(score(score_type)),
         toggleDice: (idx) => dispatch(toggle_dice(idx)),
+        rollDice: () => dispatch(roll_dice()),
     }
 }
 
@@ -81,6 +82,22 @@ class GameScreen_P extends React.Component {
         <div className='Dice-box'>
             {diceTiles}
         </div>
+
+        <div className='Rolls-indicator'>
+            Rolls left: {this.props.gameState.roundLimit - this.props.gameState.round}
+        </div>
+
+
+        <button className="Button" onClick={this.props.rollDice} style={{
+            width: '300px',
+            height: '50px',
+            fontSize: '40px',
+            position: 'relative',
+            top: '-900px',
+            left: '400px',
+        }}>
+            Roll!
+        </button>
     </div>
     }
 }

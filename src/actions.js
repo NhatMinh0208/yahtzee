@@ -20,3 +20,11 @@ export function toggle_dice(index) {
         index: index,
     }
 }
+
+
+
+export function roll_dice() {
+    return {
+        type: myConsts.ACTION_ROLL_DICE,
+    }
+}

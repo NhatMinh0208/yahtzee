@@ -191,3 +191,13 @@
     width: 70px;
     height: 70px;
 }
+
+.Rolls-indicator {
+    /* background-color: hsl(60deg, 100%, 95%); */
+    position: relative;
+    top: -1050px;
+    left: 1000px;
+    width: 400px;
+    height: 45px;
+    font-size: 40px;
+}

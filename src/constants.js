@@ -1,6 +1,7 @@
 export const ACTION_UPDSCREEN = '1';
 export const ACTION_SCORE = '2';
 export const ACTION_TOGGLE_DICE = '3';
+export const ACTION_ROLL_DICE = '4';
 
 export const SCREEN_TITLE = '1001';
 export const SCREEN_GAME = '1002';
@@ -27,6 +28,78 @@ export const SCORE_LARGE_STRAIGHT = '3011';
 export const SCORE_YAHTZEE = '3012';
 export const SCORE_CHANCE = '3013';
 export const SCORE_TOTAL = '3014';
+
+export const defaultScoreboard = [
+    {
+        type: SCORE_1,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_2,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_3,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_4,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_5,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_6,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_3_OF_A_KIND,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_4_OF_A_KIND,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_FULL_HOUSE,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_SMALL_STRAIGHT,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_LARGE_STRAIGHT,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_YAHTZEE,
+        score: [],
+        maxApplications: 1000,
+    },
+    {
+        type: SCORE_CHANCE,
+        score: [],
+        maxApplications: 1,
+    },
+    {
+        type: SCORE_TOTAL,
+        score: 0,
+    },
+]
 
 export const SCORE_LABELS = {
     '3001': 'Ones',
