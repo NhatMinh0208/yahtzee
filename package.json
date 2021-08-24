@@ -22,7 +22,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/NhatMinh0208/yahtzee.git"
-    },
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -37,5 +37,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.8"
   }
 }
