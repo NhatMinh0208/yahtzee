@@ -3,6 +3,24 @@ import React from 'react';
 import { update_screen, score, toggle_dice, roll_dice } from './actions';
 import * as myConsts from './constants';
 
+import d1 from './die1.png';
+import d2 from './die2.png';
+import d3 from './die3.png';
+import d4 from './die4.png';
+import d5 from './die5.png';
+import d6 from './die6.png';
+
+let dice = [
+<div></div>,
+<img src={d1} alt='1' className='Dice-img'></img>,
+<img src={d2} alt='2' className='Dice-img'></img>,
+<img src={d3} alt='3' className='Dice-img'></img>,
+<img src={d4} alt='4' className='Dice-img'></img>,
+<img src={d5} alt='5' className='Dice-img'></img>,
+<img src={d6} alt='6' className='Dice-img'></img>,
+]
+
+
 function mapStateToProps(state) {
     return {
         gameState: state.gameState,
@@ -56,9 +74,9 @@ class GameScreen_P extends React.Component {
     });
     const diceTiles = this.props.gameState.dice.map((num, idx) => {
         return <button className= {(this.props.gameState.keep[idx])?'Dice-tile-keep':'Dice-tile'} onClick={() => this.props.toggleDice(idx)}>
-            {num}
+            {dice[num]}
         </button>
-    })
+    });
 
 
     return <div>
