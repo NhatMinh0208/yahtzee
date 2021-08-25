@@ -2,6 +2,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import * as myConsts from './constants';
 import { defaultScoreboard } from './constants';
 import { calculateScore, clone, isGameOver } from './utils';
+import { scoreModel } from './db/model';
 
 function screenReducer(
     state = myConsts.SCREEN_TITLE,
@@ -26,6 +27,18 @@ const defaultGameState = {
     scoreboard: defaultScoreboard,
     error: null,
     errorCnt: 0,
+}
+
+function dbReducer (
+    state = {
+        status: myConsts.DB_OFFLINE,
+        pushDone: false,
+        fetchDone: false, 
+        scores: null, 
+        error: null,
+    } 
+) { 
+
 }
 
 function gameStateReducer(
@@ -151,6 +164,7 @@ function gameStateReducer(
 const mainReducer = combineReducers({
     screen: screenReducer,
     gameState: gameStateReducer,
+    scoreDB: dbReducer,
 });
 
 export const store = configureStore({

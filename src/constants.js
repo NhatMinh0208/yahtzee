@@ -16,6 +16,13 @@ export const PHASE_ROLLING = '2002';
 export const PHASE_END_OF_GAME = '2003';
 export const PHASE_PICK_JOKER = '2004';
 
+export const DB_OFFLINE = '4001';
+export const DB_CONNECTING = '4002';
+export const DB_ONLINE = '4003';
+export const DB_FETCHING = '4004';
+export const DB_PUSHING = '4005';
+
+
 export const SCORE_1 = '3001';
 export const SCORE_2 = '3002';
 export const SCORE_3 = '3003';
