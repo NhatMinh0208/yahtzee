@@ -38,7 +38,7 @@ function dbReducer (
         error: null,
     } 
 ) { 
-
+    return state;
 }
 
 function gameStateReducer(
