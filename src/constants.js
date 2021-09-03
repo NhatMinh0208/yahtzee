@@ -3,12 +3,16 @@ export const ACTION_SCORE = '2';
 export const ACTION_TOGGLE_DICE = '3';
 export const ACTION_ROLL_DICE = '4';
 export const ACTION_DEBUG_YAHTZEE = '5';
+export const ACTION_DB_UPDATE = '6';
+export const ACTION_DB_SUCCESS = '7';
+export const ACTION_DB_FAILURE = '8';
 
 export const SCREEN_TITLE = '1001';
 export const SCREEN_GAME = '1002';
 export const SCREEN_HELP = '1003';
 export const SCREEN_CREDITS = '1004';
 export const SCREEN_END = '1005';
+export const SCREEN_SCORES = '1006';
 
 export const PHASE_START_OF_GAME = '2000';
 export const PHASE_IDLE = '2001';
@@ -16,11 +20,13 @@ export const PHASE_ROLLING = '2002';
 export const PHASE_END_OF_GAME = '2003';
 export const PHASE_PICK_JOKER = '2004';
 
-export const DB_OFFLINE = '4001';
-export const DB_CONNECTING = '4002';
-export const DB_ONLINE = '4003';
-export const DB_FETCHING = '4004';
-export const DB_PUSHING = '4005';
+export const DB_NOT_CONNECTED = '4001';
+export const DB_OPERATING = '4002';
+export const DB_OK = '4003';
+export const DB_FAIL = '4004';
+
+export const OPERATION_PUSH = '5001';
+export const OPERATION_PULL = '5002';
 
 
 export const SCORE_1 = '3001';

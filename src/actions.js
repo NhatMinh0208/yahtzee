@@ -21,10 +21,36 @@ export function toggle_dice(index) {
     }
 }
 
-
-
 export function roll_dice() {
     return {
         type: myConsts.ACTION_ROLL_DICE,
+    }
+}
+
+export function start_DB_push() {
+    return {
+        type: myConsts.ACTION_DB_UPDATE,
+        operation: myConsts.OPERATION_PUSH,
+    }
+}
+
+export function start_DB_pull() {
+    return {
+        type: myConsts.ACTION_DB_UPDATE,
+        operation: myConsts.OPERATION_PULL,
+    }
+}
+
+export function end_DB_operation(data) {
+    return {
+        type: myConsts.ACTION_DB_SUCCESS,
+        data: data,
+    }
+}
+
+export function call_DB_failure(err) {
+    return {
+        type: myConsts.ACTION_DB_FAILURE,
+        err: err,
     }
 }

@@ -2,7 +2,6 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import * as myConsts from './constants';
 import { defaultScoreboard } from './constants';
 import { calculateScore, clone, isGameOver } from './utils';
-import { scoreModel } from './db/model';
 
 function screenReducer(
     state = myConsts.SCREEN_TITLE,
@@ -14,9 +13,6 @@ function screenReducer(
         default: return state;
     }
 }
-
-
-
 
 const defaultGameState = {
     round: 0,
@@ -31,14 +27,37 @@ const defaultGameState = {
 
 function dbReducer (
     state = {
-        status: myConsts.DB_OFFLINE,
-        pushDone: false,
-        fetchDone: false, 
+        status: myConsts.DB_NOT_CONNECTED,
+        curOperation: null,
         scores: null, 
         error: null,
-    } 
+    }, action 
 ) { 
-    return state;
+    switch (action.type) {
+        case myConsts.ACTION_DB_UPDATE: {
+            let newState = clone(state);
+            newState.status = myConsts.DB_OPERATING;
+            newState.curOperation = action.operation;
+            return newState;
+        }
+        case myConsts.ACTION_DB_SUCCESS: {
+            let newState = clone(state);
+            newState.status = myConsts.DB_OK;
+            if (newState.curOperation === myConsts.OPERATION_PULL) {
+                // console.log(action.data);
+                newState.scores = action.data;
+                newState.scores.sort((scoreA, scoreB) => {return scoreB.score - scoreA.score;});
+            }
+            return newState;
+        }
+        case myConsts.ACTION_DB_FAILURE: {
+            let newState = clone(state);
+            newState.status = myConsts.DB_FAIL;
+            newState.error = action.err;
+            return newState;
+        }
+        default: return state;
+    }
 }
 
 function gameStateReducer(

@@ -38,7 +38,9 @@ function mapDispatchToProps(dispatch) {
             <div className='Normal-text' style={{
                 top: '70px',
             }}>
-                With help from libraries: React, Redux
+                With help from libraries: <br />
+                Front end: React, Redux <br /> 
+                Back end: Express, Mongoose, Axios 
             </div>
         </div>
     }
@@ -88,39 +90,7 @@ class HelpScreen_P extends React.Component {
     }
 }
 
-function mapStateToProps2(state) {
-    return {
-        score: state.gameState.scoreboard[myConsts.SCORE_POSITION[myConsts.SCORE_TOTAL]].score,
-    }
-}
-
-class EndScreen_P extends React.Component {
-    render() {
-        return <div>
-            <div className='Title'>Game Over</div>
-
-            <button className='Button' onClick={() => this.props.changeScreen(myConsts.SCREEN_TITLE)} style={{
-                position: 'relative',
-                width: '450px',
-                height: '56px',
-                top: '690px',
-                left: '00px',
-                fontSize: '45px',
-            }}>
-                Return to Title Screen
-            </button>
-            <div className='Normal-text' style={{
-                top: '50px',
-                left: '150px',
-                width: '1300px',
-            }}>
-                Final score: {this.props.score}
-            </div>
-        </div>
-    }
-}
 
 
 export const CreditsScreen = connect(mapStateToProps, mapDispatchToProps)(CreditsScreen_P);
 export const HelpScreen = connect(mapStateToProps, mapDispatchToProps)(HelpScreen_P);
-export const EndScreen = connect(mapStateToProps2, mapDispatchToProps)(EndScreen_P);
